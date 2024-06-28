@@ -1,0 +1,105 @@
+import pyfiglet
+import math 
+
+# Funções para cada categoria de Matemática
+def matematica_categoria_1():
+    print("Você escolheu a categoria 1 de MATEMÁTICA.")
+
+def matematica_categoria_2():
+    print("Você escolheu a categoria 2 de MATEMÁTICA.")
+
+# Funções para cada categoria de Física
+def fisica_categoria_1():
+    print("Você escolheu a categoria 1 de FÍSICA.")
+
+def fisica_categoria_2():
+    print("Você escolheu a categoria 2 de FÍSICA.")
+
+# Funções para cada categoria de Química
+def quimica_categoria_1():
+    print("Você escolheu a categoria 1 de QUÍMICA.")
+
+def quimica_categoria_2():
+    print("Você escolheu a categoria 2 de QUÍMICA.")
+
+# Submenu para Matemática
+def submenu_matematica():
+    print("\n--- CATEGORIAS DE MATEMÁTICA ---")
+    print("(1) - Categoria 1")
+    print("(2) - Categoria 2")
+    escolha = input("Escolha uma categoria: ")
+    
+    match escolha:
+        case '1':
+            matematica_categoria_1()
+        case '2':
+            matematica_categoria_2()
+        case _:
+            print("Opção inválida. Tente novamente.")
+
+# Submenu para Física
+def submenu_fisica():
+    print("\n--- CATEGORIAS DE FÍSICA ---")
+    print("(1) - Categoria 1")
+    print("(2) - Categoria 2")
+    escolha = input("Escolha uma categoria: ")
+    
+    match escolha:
+        case '1':
+            fisica_categoria_1()
+        case '2':
+            fisica_categoria_2()
+        case _:
+            print("Opção inválida. Tente novamente.")
+
+# Submenu para Química
+def submenu_quimica():
+    print("\n--- CATEGORIAS DE QUÍMICA ---")
+    print("(1) - Categoria 1")
+    print("(2) - Categoria 2")
+    escolha = input("Escolha uma categoria: ")
+    
+    match escolha:
+        case '1':
+            quimica_categoria_1()
+        case '2':
+            quimica_categoria_2()
+        case _:
+            print("Opção inválida. Tente novamente.")
+
+# Função principal do menu
+def menu_principal():
+    # Criar textos estilizados
+    inicio_texto = pyfiglet.figlet_format("INICIO", font="starwars")
+    bem_vindo_texto = pyfiglet.figlet_format("BEM VINDO A CALCULADORA GERAL", font="slant")
+
+    # Imprimir textos estilizados
+    print("===========================================")
+    print(inicio_texto)
+    print(bem_vindo_texto)
+    print("--- ESCOLHA SUA CALCULADORA ---")
+    print("--- DIGITE O NUMERO CORRESPONDENTE ---")
+    print("")
+    print("(1) - MATEMÁTICA")
+    print("(2) - FÍSICA")
+    print("(3) - QUÍMICA")
+    print("")
+    print("===========================================")
+
+    # Capturar a escolha do usuário
+    escolha = input("Digite o número da sua opção: ")
+
+    # Correspondência de padrão usando match-case (Python 3.10+)
+    match escolha:
+        case '1':
+            submenu_matematica()
+        case '2':
+            submenu_fisica()
+        case '3':
+            submenu_quimica()
+        case _:
+            print("Opção inválida. Tente novamente.")
+
+# Executar o menu principal
+menu_principal()
+
