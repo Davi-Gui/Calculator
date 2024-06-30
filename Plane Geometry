@@ -1,0 +1,82 @@
+import math
+
+print("Calculator - Plane Geometry")
+print("######################################################")
+print("#                                                    #")
+print("#     (1) - Triangle                                 #")
+print("#     (2) - Square                                   #")
+print("#     (3) - Rectangle                                #")
+print("#     (4) - Trapezoid                                #")
+print("#     (5) - Circle                                   #")
+print("#     (6) - Rhombus                                  #")
+print("#                                                    #")
+print("######################################################")
+print("Choose the Type of Calculator")
+
+# Capture the user's choice
+choice = input()
+
+# Use the match-case structure introduced in Python 3.10
+match choice:
+    case '1':
+        print("You chose Triangle")
+        # Add the code to calculate the area of the triangle
+        print("A = (b * h) / 2")
+        print("Where: A = Area")
+        print("       b = Base")
+        print("       h = Height")
+        
+        # Capture the values of base and height
+        b = float(input("Enter the value of the base (b): "))
+        h = float(input("Enter the value of the height (h): "))
+        
+        # Calculate the area of the triangle
+        A = (b * h) / 2
+        print(f"The area of the triangle is: {A}")
+
+    case '2':
+        print("You chose Square")
+        # Add the code to calculate the area of the square
+        print("A = side^2")
+        side = float(input("Enter the value of the side: "))
+        A = side ** 2
+        print(f"The area of the square is: {A}")
+
+    case '3':
+        print("You chose Rectangle")
+        # Add the code to calculate the area of the rectangle
+        print("A = width * height")
+        width = float(input("Enter the value of the width: "))
+        height = float(input("Enter the value of the height: "))
+        A = width * height
+        print(f"The area of the rectangle is: {A}")
+
+    case '4':
+        print("You chose Trapezoid")
+        # Add the code to calculate the area of the trapezoid
+        print("A = ((B + b) * h) / 2")
+        B = float(input("Enter the value of the larger base (B): "))
+        b = float(input("Enter the value of the smaller base (b): "))
+        h = float(input("Enter the value of the height (h): "))
+        A = ((B + b) * h) / 2
+        print(f"The area of the trapezoid is: {A}")
+
+    case '5':
+        print("You chose Circle")
+        # Add the code to calculate the area of the circle
+        print("A = π * r^2")
+        r = float(input("Enter the value of the radius (r): "))
+        A = math.pi * (r ** 2)
+        print(f"The area of the circle is: {A}")
+
+    case '6':
+        print("You chose Rhombus")
+        # Add the code to calculate the area of the rhombus
+        print("A = (D * d) / 2")
+        D = float(input("Enter the value of the larger diagonal (D): "))
+        d = float(input("Enter the value of the smaller diagonal (d): "))
+        A = (D * d) / 2
+        print(f"The area of the rhombus is: {A}")
+
+    case _:
+        print("Invalid choice")
