@@ -1,0 +1,82 @@
+import math
+
+print("Calculadora - Geometria Plana")
+print("######################################################")
+print("#                                                    #")
+print("#     (1) - Triângulo                                #")
+print("#     (2) - Quadrado                                 #")
+print("#     (3) - Retângulo                                #")
+print("#     (4) - Trapézio                                 #")
+print("#     (5) - Círculo                                  #")
+print("#     (6) - Losango                                  #")
+print("#                                                    #")
+print("######################################################")
+print("Escolha o Tipo de Calculadora")
+
+# Captura a escolha do usuário
+escolha = input()
+
+# Usa a estrutura de correspondência (match-case) introduzida no Python 3.10
+match escolha:
+    case '1':
+        print("Você escolheu Triângulo")
+        # Adicione aqui o código para calcular a área do triângulo
+        print("A = (b * h) / 2")
+        print("Onde: A = Área")
+        print("      b = Base")
+        print("      h = Altura")
+        
+        # Captura os valores de base e altura
+        b = float(input("Informe o valor da base (b): "))
+        h = float(input("Informe o valor da altura (h): "))
+        
+        # Calcula a área do triângulo
+        A = (b * h) / 2
+        print(f"A área do triângulo é: {A}")
+
+    case '2':
+        print("Você escolheu Quadrado")
+        # Adicione aqui o código para calcular a área do quadrado
+        print("A = lado^2")
+        lado = float(input("Informe o valor do lado: "))
+        A = lado ** 2
+        print(f"A área do quadrado é: {A}")
+
+    case '3':
+        print("Você escolheu Retângulo")
+        # Adicione aqui o código para calcular a área do retângulo
+        print("A = largura * altura")
+        largura = float(input("Informe o valor da largura: "))
+        altura = float(input("Informe o valor da altura: "))
+        A = largura * altura
+        print(f"A área do retângulo é: {A}")
+
+    case '4':
+        print("Você escolheu Trapézio")
+        # Adicione aqui o código para calcular a área do trapézio
+        print("A = ((B + b) * h) / 2")
+        B = float(input("Informe o valor da base maior (B): "))
+        b = float(input("Informe o valor da base menor (b): "))
+        h = float(input("Informe o valor da altura (h): "))
+        A = ((B + b) * h) / 2
+        print(f"A área do trapézio é: {A}")
+
+    case '5':
+        print("Você escolheu Círculo")
+        # Adicione aqui o código para calcular a área do círculo
+        print("A = π * r^2")
+        r = float(input("Informe o valor do raio (r): "))
+        A = math.pi * (r ** 2)
+        print(f"A área do círculo é: {A}")
+
+    case '6':
+        print("Você escolheu Losango")
+        # Adicione aqui o código para calcular a área do losango
+        print("A = (D * d) / 2")
+        D = float(input("Informe o valor da diagonal maior (D): "))
+        d = float(input("Informe o valor da diagonal menor (d): "))
+        A = (D * d) / 2
+        print(f"A área do losango é: {A}")
+
+    case _:
+        print("Escolha inválida")
