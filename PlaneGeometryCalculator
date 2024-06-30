@@ -1,0 +1,88 @@
+import math
+
+class PlaneGeometryCalculator:
+    def __init__(self):
+        self.show_menu()
+        self.choice = input("Enter your choice: ")
+        self.calculate_area()
+
+    def show_menu(self):
+        print("Calculator - Plane Geometry")
+        print("######################################################")
+        print("#                                                    #")
+        print("#     (1) - Triangle                                 #")
+        print("#     (2) - Square                                   #")
+        print("#     (3) - Rectangle                                #")
+        print("#     (4) - Trapezoid                                #")
+        print("#     (5) - Circle                                   #")
+        print("#     (6) - Rhombus                                  #")
+        print("#                                                    #")
+        print("######################################################")
+        print("Choose the Type of Calculator")
+
+    def calculate_area(self):
+        match self.choice:
+            case '1':
+                self.triangle_area()
+            case '2':
+                self.square_area()
+            case '3':
+                self.rectangle_area()
+            case '4':
+                self.trapezoid_area()
+            case '5':
+                self.circle_area()
+            case '6':
+                self.rhombus_area()
+            case _:
+                print("Invalid choice")
+
+    def triangle_area(self):
+        print("You chose Triangle")
+        print("A = (b * h) / 2")
+        b = float(input("Enter the value of the base (b): "))
+        h = float(input("Enter the value of the height (h): "))
+        A = (b * h) / 2
+        print(f"The area of the triangle is: {A}")
+
+    def square_area(self):
+        print("You chose Square")
+        print("A = side^2")
+        side = float(input("Enter the value of the side: "))
+        A = side ** 2
+        print(f"The area of the square is: {A}")
+
+    def rectangle_area(self):
+        print("You chose Rectangle")
+        print("A = width * height")
+        width = float(input("Enter the value of the width: "))
+        height = float(input("Enter the value of the height: "))
+        A = width * height
+        print(f"The area of the rectangle is: {A}")
+
+    def trapezoid_area(self):
+        print("You chose Trapezoid")
+        print("A = ((B + b) * h) / 2")
+        B = float(input("Enter the value of the larger base (B): "))
+        b = float(input("Enter the value of the smaller base (b): "))
+        h = float(input("Enter the value of the height (h): "))
+        A = ((B + b) * h) / 2
+        print(f"The area of the trapezoid is: {A}")
+
+    def circle_area(self):
+        print("You chose Circle")
+        print("A = π * r^2")
+        r = float(input("Enter the value of the radius (r): "))
+        A = math.pi * (r ** 2)
+        print(f"The area of the circle is: {A}")
+
+    def rhombus_area(self):
+        print("You chose Rhombus")
+        print("A = (D * d) / 2")
+        D = float(input("Enter the value of the larger diagonal (D): "))
+        d = float(input("Enter the value of the smaller diagonal (d): "))
+        A = (D * d) / 2
+        print(f"The area of the rhombus is: {A}")
+
+# Create an instance of the calculator to run it
+calculator = PlaneGeometryCalculator()
